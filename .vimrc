@@ -52,3 +52,9 @@ set background=dark
 
 set clipboard=unnamedplus "requires +clipboard
 
+" Formatting {
+    "set autoindent                  " Indent at the same level of the previous line
+    set expandtab
+    set shiftwidth=4                " Use indents of 4 spaces
+    set tabstop=4                   " An indentation every four columns
+" }
