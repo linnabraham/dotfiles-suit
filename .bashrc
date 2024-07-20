@@ -31,3 +31,12 @@ unset __conda_setup
 #ssh-add ~/.ssh/solar_deploy_key &>/dev/null
 #ssh-add ~/.ssh/iucaa_suit &>/dev/null
 conda activate solar311
+source ~/git-prompt.sh
+export PS1="\[\033[32m\]\w\[\033[33m\]\$(GIT_PS1_SHOWUNTRACKEDFILES=1 GIT_PS1_SHOWDIRTYSTATE=1 __git_ps1)\[\033[00m\]\n\t $ "
+function set_conda_env_prompt {
+    if [[ -n "$CONDA_DEFAULT_ENV" ]]; then
+        PS1="($CONDA_DEFAULT_ENV) $PS1"
+    fi
+}
+
+set_conda_env_prompt
