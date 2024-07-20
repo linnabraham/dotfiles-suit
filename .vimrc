@@ -50,3 +50,5 @@ set background=dark
 
 
 
+set clipboard=unnamedplus "requires +clipboard
+
