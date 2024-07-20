@@ -63,3 +63,8 @@ set list
 " Configure listchars
 set listchars=tab:\|\ ,trail:·
 " }
+" custom-mods {
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
