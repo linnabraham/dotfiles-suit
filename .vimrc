@@ -57,4 +57,9 @@ set clipboard=unnamedplus "requires +clipboard
     set expandtab
     set shiftwidth=4                " Use indents of 4 spaces
     set tabstop=4                   " An indentation every four columns
+" Enable list mode
+set list
+
+" Configure listchars
+set listchars=tab:\|\ ,trail:·
 " }
