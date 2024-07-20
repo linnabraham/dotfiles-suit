@@ -27,4 +27,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+#eval "$(ssh-agent -s)" &>/dev/null
+#ssh-add ~/.ssh/solar_deploy_key &>/dev/null
+#ssh-add ~/.ssh/iucaa_suit &>/dev/null
 conda activate solar311
