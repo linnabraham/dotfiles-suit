@@ -31,6 +31,13 @@ unset __conda_setup
 #ssh-add ~/.ssh/solar_deploy_key &>/dev/null
 #ssh-add ~/.ssh/iucaa_suit &>/dev/null
 conda activate solar311
+alias clear='printf "\ec"'
+alias pylint='/data/linn/miniconda3/bin/pylint --errors-only'
+alias gsu='git status -uno'
+alias gd='git diff'
+alias gl='git log --graph --all --pretty=format:"%C(auto)%h%C(reset) %ad %C(auto)%d%C(reset) %s" --date=format:"%b %d, %Y"'
+alias gs='git status'
+set -o ignoreeof
 source ~/git-prompt.sh
 export PS1="\[\033[32m\]\w\[\033[33m\]\$(GIT_PS1_SHOWUNTRACKEDFILES=1 GIT_PS1_SHOWDIRTYSTATE=1 __git_ps1)\[\033[00m\]\n\t $ "
 function set_conda_env_prompt {
@@ -40,3 +47,4 @@ function set_conda_env_prompt {
 }
 
 set_conda_env_prompt
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
